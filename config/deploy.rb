@@ -20,6 +20,7 @@ ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/id_rsa-gsg-keypair"]
 # any other name (in case you have your own DNS alias) or it won't
 # be able to resolve to the internal IP address.
 role :web,      "ec2-204-236-223-146.compute-1.amazonaws.com"
+role :app,      "ec2-204-236-223-146.compute-1.amazonaws.com"
 role :memcache, "ec2-204-236-223-146.compute-1.amazonaws.com"
 role :db,       "ec2-204-236-223-146.compute-1.amazonaws.com", :primary => true
 # role :db,       "ec2-56-xx-xx-xx.z-1.compute-1.amazonaws.com", :primary => true, :ebs_vol_id => 'vol-12345abc'
