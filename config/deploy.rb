@@ -1,9 +1,15 @@
 # This is a sample Capistrano config file for EC2 on Rails.
 # It should be edited and customized.
 
-set :application, "yourapp"
+set :application, "locations"
 
-set :repository, "http://svn.foo.com/svn/#{application}/trunk"
+set :scm, :git
+set :repository, "git@github.com:datawrangling/locations.git"
+default_run_options[:shell] = false
+
+set :deploy_via, :copy
+set :git_shallow_clone, 1
+set :normalize_asset_timestamps, false
 
 # NOTE: for some reason Capistrano requires you to have both the public and
 # the private key in the same folder, the public key should have the 
@@ -30,36 +36,36 @@ set :rails_env, "production"
 set :ec2onrails_config, {
   # S3 bucket and "subdir" used by the ec2onrails:db:restore task
   # NOTE: this only applies if you are not using EBS
-  :restore_from_bucket => "your-bucket",
-  :restore_from_bucket_subdir => "database",
-  
+  # :restore_from_bucket => "your-bucket",
+  # :restore_from_bucket_subdir => "database",
+  # 
   # S3 bucket and "subdir" used by the ec2onrails:db:archive task
   # This does not affect the automatic backup of your MySQL db to S3, it's
   # just for manually archiving a db snapshot to a different bucket if 
   # desired.
   # NOTE: this only applies if you are not using EBS
-  :archive_to_bucket => "your-other-bucket",
-  :archive_to_bucket_subdir => "db-archive/#{Time.new.strftime('%Y-%m-%d--%H-%M-%S')}",
-  
+  # :archive_to_bucket => "your-other-bucket",
+  # :archive_to_bucket_subdir => "db-archive/#{Time.new.strftime('%Y-%m-%d--%H-%M-%S')}",
+  # 
   # Set a root password for MySQL. Run "cap ec2onrails:db:set_root_password"
   # to enable this. This is optional, and after doing this the
   # ec2onrails:db:drop task won't work, but be aware that MySQL accepts 
   # connections on the public network interface (you should block the MySQL
   # port with the firewall anyway). 
   # If you don't care about setting the mysql root password then remove this.
-  :mysql_root_password => "your-mysql-root-password",
+  # :mysql_root_password => "your-mysql-root-password",
   
   # Any extra Ubuntu packages to install if desired
   # If you don't want to install extra packages then remove this.
-  :packages => ["logwatch", "imagemagick"],
+  :packages => ["logwatch", "imagemagick", "python-beautifulsoup", "python-mysqldb", "expect", "ec2-api-tools"],
+
   
   # Any extra RubyGems to install if desired: can be "gemname" or if a 
   # particular version is desired "gemname -v 1.0.1"
   # If you don't want to install extra rubygems then remove this
   # NOTE: if you are using rails 2.1, ec2onrails calls 'sudo rake gem:install',
   # which will install gems defined in your rails configuration
-  :rubygems => ["rmagick", "rfacebook -v 0.9.7"],
-  
+  :rubygems => ["rails -v 2.3.2", "mislav-will_paginate -v 2.3.8", "ya2yaml", "json"],  
   # extra security measures are taken if this is true, BUT it makes initial
   # experimentation and setup a bit tricky.  For example, if you do not
   # have your ssh keys setup correctly, you will be locked out of your
@@ -88,16 +94,16 @@ set :ec2onrails_config, {
   # If config files are deployed, some services might need to be restarted.
   # If you don't need to deploy customized config files to the server then
   # remove this.
-  :services_to_restart => %w(postfix sysklogd),
+  :services_to_restart => %w(apache2 postfix sysklogd),
   
   # Set an email address to forward admin mail messages to. If you don't
   # want to receive mail from the server (e.g. monit alert messages) then
   # remove this.
-  :mail_forward_address => "you@yourdomain.com",
+  # :mail_forward_address => "you@yourdomain.com",
   
   # Set this if you want SSL to be enabled on the web server. The SSL cert 
   # and key files need to exist on the server, The cert file should be in
   # /etc/ssl/certs/default.pem and the key file should be in
   # /etc/ssl/private/default.key (see :server_config_files_root).
-  :enable_ssl => true
+  # :enable_ssl => true
 }
