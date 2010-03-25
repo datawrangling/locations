@@ -14,14 +14,14 @@ set :normalize_asset_timestamps, false
 # NOTE: for some reason Capistrano requires you to have both the public and
 # the private key in the same folder, the public key should have the 
 # extension ".pub".
-ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/your-ec2-key"]
+ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/id_rsa-gsg-keypair"]
 
 # Your EC2 instances. Use the ec2-xxx....amazonaws.com hostname, not
 # any other name (in case you have your own DNS alias) or it won't
 # be able to resolve to the internal IP address.
-role :web,      "ec2-12-xx-xx-xx.z-1.compute-1.amazonaws.com"
-role :memcache, "ec2-12-xx-xx-xx.z-1.compute-1.amazonaws.com"
-role :db,       "ec2-56-xx-xx-xx.z-1.compute-1.amazonaws.com", :primary => true
+role :web,      "ec2-204-236-223-146.compute-1.amazonaws.com"
+role :memcache, "ec2-204-236-223-146.compute-1.amazonaws.com"
+role :db,       "ec2-204-236-223-146.compute-1.amazonaws.com", :primary => true
 # role :db,       "ec2-56-xx-xx-xx.z-1.compute-1.amazonaws.com", :primary => true, :ebs_vol_id => 'vol-12345abc'
 # optinally, you can specify Amazon's EBS volume ID if the database is persisted 
 # via Amazon's EBS.  See the main README for more information.
@@ -89,7 +89,7 @@ set :ec2onrails_config, {
   # server's filesystem. 
   # If you don't need to deploy customized config files to the server then
   # remove this.
-  :server_config_files_root => "../server_configs",
+  :server_config_files_root => "server_config",
   
   # If config files are deployed, some services might need to be restarted.
   # If you don't need to deploy customized config files to the server then
