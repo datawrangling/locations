@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  geonameid: 1
+  name: MyString
+  latitude: 1.5
+  longitude: 1.5
+  country_code: MyString
+  cc2: MyString
+  fipscode: MyString
+  county: MyString
+  population: 1
+
+two:
+  geonameid: 1
+  name: MyString
+  latitude: 1.5
+  longitude: 1.5
+  country_code: MyString
+  cc2: MyString
+  fipscode: MyString
+  county: MyString
+  population: 1

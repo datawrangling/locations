@@ -1,0 +1,5 @@
+<ul>
+	<% for location in @locations %>
+	<li><%= link_to h(location.name + ', ' + location.fipscode + ', ' + location.country_code), :controller=>"locations", :action=>"show", :id=>location %></li>
+  	<% end %>
+</ul>

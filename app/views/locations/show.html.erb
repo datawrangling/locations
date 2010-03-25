@@ -1,0 +1,37 @@
+<p>
+  <h3>City GeonameId: </h3><h2><b><%=h @location.geonameid %></b> </h2>
+</p>
+
+<p>
+  <b>City Name:</b>
+  <%=h @location.name %>
+</p>
+
+<p>
+  <b>State Code:</b>
+  <%=h @location.fipscode %>
+</p>
+
+<p>
+  <b>Country code:</b>
+  <%=h @location.country_code %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%=h @location.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%=h @location.longitude %>
+</p>
+
+
+<p>
+  <b>Population:</b>
+  <%=h @location.population %>
+</p>
+
+
+<%= link_to 'Back', locations_path %>

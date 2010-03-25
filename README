@@ -1,0 +1,22 @@
+== Location name browser app
+
+ruby script/generate scaffold Location geonameid:integer name:string latitude:float longitude:float country_code:string cc2:string fipscode:string county:string population:integer 
+
+grep PPL cities15000.txt | cut -d '     ' -f 1,2,5,6,8,9,10,11,12,15 
+
+grep PPL cities15000.txt | ./parse_geonames.py > sample_cities.txt
+
+The main 'geoname' table has the following fields :
+---------------------------------------------------
+1 geonameid         : integer id of record in geonames database
+2 name              : name of geographical point (utf8) varchar(200)
+5 latitude          : latitude in decimal degrees (wgs84)
+6 longitude         : longitude in decimal degrees (wgs84)
+9 country code      : ISO-3166 2-letter country code, 2 characters
+10 cc2               : alternate country codes, comma separated, ISO-3166 2-letter country code, 60 characters
+11 admin1 code       : fipscode (subject to change to iso code), see exceptions below, see file admin1Codes.txt for 
+12 admin2 code       : code for the second administrative division, a county in the US, see file admin2Codes.txt; 
+15 population        : bigint (4 byte int) 
+
+cd lib/sql
+mysql -u root location_development < locations.sql

@@ -1,0 +1,38 @@
+<h2>Start typing in the search box above to find a city.</h2>
+<h2>Click on a suggested city to get the GeonameID.</h2>
+
+<table>
+  <tr>
+    <th>Geonameid</th>
+    <th>Name</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Country code</th>
+    <th>Cc2</th>
+    <th>Fipscode</th>
+    <th>County</th>
+    <th>Population</th>
+  </tr>
+
+<% @locations.each do |location| %>
+  <tr>
+    <td><%=h location.geonameid %></td>
+    <td><%=h location.name %></td>
+    <td><%=h location.latitude %></td>
+    <td><%=h location.longitude %></td>
+    <td><%=h location.country_code %></td>
+    <td><%=h location.cc2 %></td>
+    <td><%=h location.fipscode %></td>
+    <td><%=h location.county %></td>
+    <td><%=h location.population %></td>
+    <td><%= link_to 'Show', location %></td>
+  </tr>
+<% end %>
+</table>
+<BR>
+<center>
+    <span class="grey"><%= will_paginate @locations, :page_links=> false %></span>
+</center> 
+<BR>
+<br />
+

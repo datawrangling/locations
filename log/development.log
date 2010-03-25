@@ -1,0 +1,1078 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-25 04:23:14) [GET]
+Rendering home/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/home]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-25 04:24:26) [GET]
+Rendering home/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (22.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (681.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (299.3ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20100325113656)
+  [4;35;1mSQL (51.7ms)[0m   [0mCREATE TABLE `locations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `geonameid` int(11), `name` varchar(255), `latitude` float, `longitude` float, `country_code` varchar(255), `cc2` varchar(255), `fipscode` varchar(255), `county` varchar(255), `population` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (23.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100325113656')[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (109.1ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (9.4ms)[0m   [0mdescribe `locations`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `locations`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-25 04:56:14) [GET]
+Rendering home/index
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 04:56:19) [GET]
+  [4;36;1mLocation Load (188.7ms)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+  [4;35;1mLocation Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Completed in 24175ms (View: 23232, DB: 193) | 200 OK [http://localhost/locations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 04:56:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocation Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mLocation Load (87.1ms)[0m   [0mSELECT * FROM `locations` WHERE (`locations`.`id` = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Completed in 123ms (View: 20, DB: 90) | 200 OK [http://localhost/locations/1]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-25 05:14:32) [GET]
+Rendering home/index
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 05:14:36) [GET]
+  [4;36;1mLocation Load (166.2ms)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+  [4;35;1mLocation Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+
+ActionView::TemplateError (undefined method `total_pages' for #<Array:0x294a780>) on line #33 of app/views/locations/index.html.erb:
+30: </table>
+31: <BR>
+32: <center>
+33:     <span class="grey"><%= will_paginate @locations, :page_links=> false %></span>
+34: </center> 
+35: <BR>
+36: <br />
+
+    /Users/pskomoroch/.gem/ruby/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/view_helpers.rb:197:in `total_pages_for_collection'
+    /Users/pskomoroch/.gem/ruby/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/view_helpers.rb:98:in `will_paginate'
+    app/views/locations/index.html.erb:33
+    app/controllers/locations_controller.rb:18:in `index'
+
+Rendered rescues/_trace (58.3ms)
+Rendered rescues/_request_and_response (16.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20100325113656)
+  [4;36;1mSQL (57.3ms)[0m   [0;1mDROP TABLE `locations`[0m
+  [4;35;1mSQL (77.7ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100325113656'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20100325113656)
+  [4;36;1mSQL (57.0ms)[0m   [0;1mCREATE TABLE `locations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `geonameid` int(11), `name` varchar(255), `latitude` float, `longitude` float, `country_code` varchar(255), `cc2` varchar(255), `fipscode` varchar(255), `county` varchar(255), `population` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (106.6ms)[0m   [0mCREATE INDEX `name_pop_index` ON `locations` (`name`, `population`)[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100325113656')[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `locations`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW KEYS FROM `locations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 05:21:06) [GET]
+  [4;36;1mLocation Load (897.8ms)[0m   [0;1mSELECT * FROM `locations` ORDER BY population DESC LIMIT 0, 12[0m
+  [4;35;1mLocation Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mSQL (64.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Rendered locations/_search_pane (0.8ms)
+Completed in 998ms (View: 25, DB: 965) | 200 OK [http://localhost/locations]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:21:20) [POST]
+  Parameters: {"search"=>{"query"=>"N"}}
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #2 of app/views/locations/_search_results.html.erb:
+1: <ul>
+2: 	<% for location in @locations %>
+3: 	<li><%= link_to h(location.name), :controller=>"locations", :action=>"show", :id=>location %></li>
+4:   	<% end %>
+5: </ul>
+
+    app/views/locations/_search_results.html.erb:2
+    app/controllers/locations_controller.rb:10:in `auto_complete_for_search_query'
+
+Rendered rescues/_trace (63.2ms)
+Rendered rescues/_request_and_response (3.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:21:22) [POST]
+  Parameters: {"search"=>{"query"=>"Ne"}}
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #2 of app/views/locations/_search_results.html.erb:
+1: <ul>
+2: 	<% for location in @locations %>
+3: 	<li><%= link_to h(location.name), :controller=>"locations", :action=>"show", :id=>location %></li>
+4:   	<% end %>
+5: </ul>
+
+    app/views/locations/_search_results.html.erb:2
+    app/controllers/locations_controller.rb:10:in `auto_complete_for_search_query'
+
+Rendered rescues/_trace (128.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:21:23) [POST]
+  Parameters: {"search"=>{"query"=>"New"}}
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #2 of app/views/locations/_search_results.html.erb:
+1: <ul>
+2: 	<% for location in @locations %>
+3: 	<li><%= link_to h(location.name), :controller=>"locations", :action=>"show", :id=>location %></li>
+4:   	<% end %>
+5: </ul>
+
+    app/views/locations/_search_results.html.erb:2
+    app/controllers/locations_controller.rb:10:in `auto_complete_for_search_query'
+
+Rendered rescues/_trace (60.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:21:30) [POST]
+  Parameters: {"search"=>{"query"=>"New"}}
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #2 of app/views/locations/_search_results.html.erb:
+1: <ul>
+2: 	<% for location in @locations %>
+3: 	<li><%= link_to h(location.name), :controller=>"locations", :action=>"show", :id=>location %></li>
+4:   	<% end %>
+5: </ul>
+
+    app/views/locations/_search_results.html.erb:2
+    app/controllers/locations_controller.rb:10:in `auto_complete_for_search_query'
+
+Rendered rescues/_trace (149.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.7ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:21:33) [POST]
+  Parameters: {"search"=>{"query"=>"Ne"}}
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #2 of app/views/locations/_search_results.html.erb:
+1: <ul>
+2: 	<% for location in @locations %>
+3: 	<li><%= link_to h(location.name), :controller=>"locations", :action=>"show", :id=>location %></li>
+4:   	<% end %>
+5: </ul>
+
+    app/views/locations/_search_results.html.erb:2
+    app/controllers/locations_controller.rb:10:in `auto_complete_for_search_query'
+
+Rendered rescues/_trace (59.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:21:34) [POST]
+  Parameters: {"search"=>{"query"=>"New"}}
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #2 of app/views/locations/_search_results.html.erb:
+1: <ul>
+2: 	<% for location in @locations %>
+3: 	<li><%= link_to h(location.name), :controller=>"locations", :action=>"show", :id=>location %></li>
+4:   	<% end %>
+5: </ul>
+
+    app/views/locations/_search_results.html.erb:2
+    app/controllers/locations_controller.rb:10:in `auto_complete_for_search_query'
+
+Rendered rescues/_trace (140.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 05:52:31) [GET]
+  [4;36;1mLocation Load (48.7ms)[0m   [0;1mSELECT * FROM `locations` ORDER BY population DESC LIMIT 0, 12[0m
+  [4;35;1mLocation Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mSQL (14.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Rendered locations/_search_pane (1.0ms)
+Completed in 100ms (View: 27, DB: 66) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:52:36) [POST]
+  Parameters: {"search"=>{"query"=>"ne"}}
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #2 of app/views/locations/_search_results.html.erb:
+1: <ul>
+2: 	<% for location in @locations %>
+3: 	<li><%= link_to h(location.name), :controller=>"locations", :action=>"show", :id=>location %></li>
+4:   	<% end %>
+5: </ul>
+
+    app/views/locations/_search_results.html.erb:2
+    app/controllers/locations_controller.rb:10:in `auto_complete_for_search_query'
+
+Rendered rescues/_trace (65.0ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:52:38) [POST]
+  Parameters: {"search"=>{"query"=>"new"}}
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #2 of app/views/locations/_search_results.html.erb:
+1: <ul>
+2: 	<% for location in @locations %>
+3: 	<li><%= link_to h(location.name), :controller=>"locations", :action=>"show", :id=>location %></li>
+4:   	<% end %>
+5: </ul>
+
+    app/views/locations/_search_results.html.erb:2
+    app/controllers/locations_controller.rb:10:in `auto_complete_for_search_query'
+
+Rendered rescues/_trace (140.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:54:21) [POST]
+  Parameters: {"search"=>{"query"=>"new"}}
+  [4;36;1mLocation Load (2.1ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'new%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (12.5ms)
+Completed in 24ms (View: 14, DB: 5) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:54:35) [POST]
+  Parameters: {"search"=>{"query"=>"hong"}}
+  [4;36;1mLocation Load (1.0ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'hong%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (9.3ms)
+Completed in 14ms (View: 6, DB: 4) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 05:54:55) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mLocation Load (60.9ms)[0m   [0;1mSELECT * FROM `locations` ORDER BY population DESC LIMIT 12, 12[0m
+  [4;35;1mLocation Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Rendered locations/_search_pane (1.0ms)
+Completed in 105ms (View: 33, DB: 65) | 200 OK [http://localhost/locations?page=2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:55:00) [POST]
+  Parameters: {"search"=>{"query"=>"bi"}}
+  [4;35;1mLocation Load (4.3ms)[0m   [0mSELECT * FROM `locations` WHERE (name like 'bi%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;36;1mLocation Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (12.0ms)
+Completed in 19ms (View: 7, DB: 6) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:55:01) [POST]
+  Parameters: {"search"=>{"query"=>"bim"}}
+  [4;35;1mLocation Load (0.8ms)[0m   [0mSELECT * FROM `locations` WHERE (name like 'bim%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;36;1mLocation Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (7.5ms)
+Completed in 14ms (View: 6, DB: 3) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:55:03) [POST]
+  Parameters: {"search"=>{"query"=>"bi"}}
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM `locations` WHERE (name like 'bi%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;36;1mLocation Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (8.7ms)
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:55:04) [POST]
+  Parameters: {"search"=>{"query"=>"birm"}}
+  [4;35;1mLocation Load (1.0ms)[0m   [0mSELECT * FROM `locations` WHERE (name like 'birm%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;36;1mLocation Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (8.6ms)
+Completed in 14ms (View: 6, DB: 3) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:57:00) [POST]
+  Parameters: {"search"=>{"query"=>"bir"}}
+  [4;36;1mLocation Load (1.6ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'bir%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #3 of app/views/locations/_search_results.html.erb:
+1: <ul>
+2: 	<% for location in @locations %>
+3: 	<li><%= link_to h(location.name location.fipscode location.country_code), :controller=>"locations", :action=>"show", :id=>location %></li>
+4:   	<% end %>
+5: </ul>
+
+    app/views/locations/_search_results.html.erb:3:in `fipscode'
+    app/views/locations/_search_results.html.erb:3
+    (__DELEGATION__):2:in `each'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `each'
+    app/views/locations/_search_results.html.erb:2
+    app/controllers/locations_controller.rb:10:in `auto_complete_for_search_query'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:57:04) [POST]
+  Parameters: {"search"=>{"query"=>"birm"}}
+  [4;36;1mLocation Load (0.2ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'birm%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #3 of app/views/locations/_search_results.html.erb:
+1: <ul>
+2: 	<% for location in @locations %>
+3: 	<li><%= link_to h(location.name location.fipscode location.country_code), :controller=>"locations", :action=>"show", :id=>location %></li>
+4:   	<% end %>
+5: </ul>
+
+    app/views/locations/_search_results.html.erb:3:in `fipscode'
+    app/views/locations/_search_results.html.erb:3
+    (__DELEGATION__):2:in `each'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `each'
+    app/views/locations/_search_results.html.erb:2
+    app/controllers/locations_controller.rb:10:in `auto_complete_for_search_query'
+
+Rendered rescues/_trace (145.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:58:08) [POST]
+  Parameters: {"search"=>{"query"=>"bir"}}
+ERROR: compiling _run_erb_app47views47locations47_search_results46html46erb_locals_object_search_results RAISED compile error
+/Users/pskomoroch/rails_projects/location/app/views/locations/_search_results.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting ')'
+...(location.name + ', ' location.fipscode + ', ' + location.co...
+                              ^
+/Users/pskomoroch/rails_projects/location/app/views/locations/_search_results.html.erb:3: syntax error, unexpected ')', expecting kEND
+...>"show", :id=>location ).to_s); @output_buffer.concat "</li>...
+                              ^
+Function body:           def _run_erb_app47views47locations47_search_results46html46erb_locals_object_search_results(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];search_results = local_assigns[:search_results];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<ul>\n\t"
+;  for location in @locations ; @output_buffer.concat "\n\t<li>"
+; @output_buffer.concat(( link_to h(location.name + ', ' location.fipscode + ', ' + location.country_code), :controller=>"locations", :action=>"show", :id=>location ).to_s); @output_buffer.concat "</li>\n  \t"
+;  end ; @output_buffer.concat "\n</ul>"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/pskomoroch/rails_projects/location/app/views/locations/_search_results.html.erb:8:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:20:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:19:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:184:in `render_partial'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:262:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:964:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/pskomoroch/rails_projects/location/app/controllers/locations_controller.rb:10:in `auto_complete_for_search_query'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/pskomoroch/rails_projects/location/app/views/locations/_search_results.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting ')'
+...(location.name + ', ' location.fipscode + ', ' + location.co...
+                              ^
+/Users/pskomoroch/rails_projects/location/app/views/locations/_search_results.html.erb:3: syntax error, unexpected ')', expecting kEND
+...>"show", :id=>location ).to_s); @output_buffer.concat "</li>...
+                              ^) on line #3 of app/views/locations/_search_results.html.erb:
+1: <ul>
+2: 	<% for location in @locations %>
+3: 	<li><%= link_to h(location.name + ', ' location.fipscode + ', ' + location.country_code), :controller=>"locations", :action=>"show", :id=>location %></li>
+4:   	<% end %>
+5: </ul>
+
+    app/views/locations/_search_results.html.erb:8:in `compile!'
+    app/controllers/locations_controller.rb:10:in `auto_complete_for_search_query'
+
+Rendered rescues/_trace (57.9ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 05:59:15) [POST]
+  Parameters: {"search"=>{"query"=>"bir"}}
+  [4;36;1mLocation Load (0.3ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'bir%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (14.5ms)
+Completed in 28ms (View: 21, DB: 3) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 06:17:43) [POST]
+  Parameters: {"search"=>{"query"=>"new"}}
+  [4;36;1mLocation Load (0.2ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'new%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (8.3ms)
+Completed in 20ms (View: 7, DB: 3) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 06:17:45) [GET]
+  Parameters: {"id"=>"20140"}
+  [4;36;1mLocation Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mLocation Load (0.7ms)[0m   [0mSELECT * FROM `locations` WHERE (`locations`.`id` = 20140) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (1.0ms)
+Completed in 33ms (View: 23, DB: 4) | 200 OK [http://localhost/locations/20140]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 06:18:05) [GET]
+  [4;36;1mLocation Load (0.2ms)[0m   [0;1mSELECT * FROM `locations` ORDER BY population DESC LIMIT 0, 12[0m
+  [4;35;1mLocation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Rendered locations/_search_pane (0.6ms)
+Completed in 25ms (View: 16, DB: 3) | 200 OK [http://localhost/locations]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:09:13) [POST]
+  Parameters: {"search"=>{"query"=>"stro"}}
+  [4;36;1mLocation Load (2.2ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'stro%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (10.9ms)
+Completed in 29ms (View: 13, DB: 4) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:09:15) [POST]
+  Parameters: {"search"=>{"query"=>"strok"}}
+  [4;36;1mLocation Load (1.1ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'strok%' ) ORDER BY `population` DESC LIMIT 12[0m
+Rendered locations/_search_results (2.3ms)
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:17:37) [POST]
+  Parameters: {"search"=>{"query"=>"sao"}}
+  [4;36;1mLocation Load (2.9ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'sao%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (19.4ms)
+Completed in 33ms (View: 22, DB: 6) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:17:50) [GET]
+  Parameters: {"id"=>"1264"}
+  [4;36;1mLocation Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mLocation Load (0.3ms)[0m   [0mSELECT * FROM `locations` WHERE (`locations`.`id` = 1264) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (15.4ms)
+Completed in 65ms (View: 53, DB: 4) | 200 OK [http://localhost/locations/1264]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 07:34:09) [GET]
+  [4;36;1mLocation Load (0.4ms)[0m   [0;1mSELECT * FROM `locations` ORDER BY population DESC LIMIT 0, 12[0m
+  [4;35;1mLocation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Rendered locations/_search_pane (0.5ms)
+Completed in 58ms (View: 49, DB: 3) | 200 OK [http://localhost/locations/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 07:35:04) [GET]
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM `locations` ORDER BY population DESC LIMIT 0, 12[0m
+  [4;36;1mLocation Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSELECT count(*) AS count_all FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Rendered locations/_search_pane (0.8ms)
+Completed in 31ms (View: 20, DB: 4) | 200 OK [http://localhost/locations/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:35:15) [POST]
+  Parameters: {"search"=>{"query"=>"san"}}
+  [4;36;1mLocation Load (6.2ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'san%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (14.5ms)
+Completed in 26ms (View: 7, DB: 9) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:35:20) [POST]
+  Parameters: {"search"=>{"query"=>"s"}}
+  [4;36;1mLocation Load (29.0ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 's%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (38.4ms)
+Completed in 44ms (View: 8, DB: 31) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 07:37:08) [GET]
+  [4;36;1mLocation Load (0.2ms)[0m   [0;1mSELECT * FROM `locations` ORDER BY population DESC LIMIT 0, 12[0m
+  [4;35;1mLocation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Rendered locations/_search_pane (5.8ms)
+Completed in 32ms (View: 21, DB: 3) | 200 OK [http://localhost/locations/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 07:37:33) [GET]
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM `locations` ORDER BY population DESC LIMIT 0, 12[0m
+  [4;36;1mLocation Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Rendered locations/_search_pane (0.4ms)
+Completed in 25ms (View: 15, DB: 3) | 200 OK [http://localhost/locations/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:37:44) [POST]
+  Parameters: {"search"=>{"query"=>"bos"}}
+  [4;36;1mLocation Load (1.1ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'bos%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (11.2ms)
+Completed in 17ms (View: 7, DB: 5) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:37:54) [POST]
+  Parameters: {"search"=>{"query"=>"bost"}}
+  [4;36;1mLocation Load (0.9ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'bost%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (7.0ms)
+Completed in 13ms (View: 5, DB: 3) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:37:57) [POST]
+  Parameters: {"search"=>{"query"=>"Boston, MA, U"}}
+  [4;36;1mLocation Load (0.9ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'Boston, MA, U%' ) ORDER BY `population` DESC LIMIT 12[0m
+Rendered locations/_search_results (2.0ms)
+Completed in 16ms (View: 2, DB: 1) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:38:00) [POST]
+  Parameters: {"search"=>{"query"=>"Bost"}}
+  [4;35;1mLocation Load (0.9ms)[0m   [0mSELECT * FROM `locations` WHERE (name like 'Bost%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;36;1mLocation Columns (6.6ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (12.4ms)
+Completed in 17ms (View: 6, DB: 8) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:38:03) [GET]
+  Parameters: {"id"=>"19657"}
+  [4;35;1mLocation Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (1.6ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 19657) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.7ms)
+Completed in 23ms (View: 5, DB: 4) | 200 OK [http://localhost/locations/19657]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 07:39:06) [GET]
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM `locations` ORDER BY population DESC LIMIT 0, 12[0m
+  [4;36;1mLocation Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Rendered locations/_search_pane (0.4ms)
+Completed in 29ms (View: 19, DB: 3) | 200 OK [http://localhost/locations/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 07:39:47) [GET]
+  [4;36;1mLocation Load (0.2ms)[0m   [0;1mSELECT * FROM `locations` ORDER BY population DESC LIMIT 0, 12[0m
+  [4;35;1mLocation Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Rendered locations/_search_pane (0.4ms)
+Completed in 25ms (View: 15, DB: 2) | 200 OK [http://localhost/locations/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:39:56) [POST]
+  Parameters: {"search"=>{"query"=>"san"}}
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM `locations` WHERE (name like 'san%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;36;1mLocation Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (8.3ms)
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:39:58) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (1.5ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (1.2ms)
+Completed in 22ms (View: 5, DB: 5) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:41:40) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (0.8ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.5ms)
+Completed in 18ms (View: 9, DB: 3) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:41:41) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (5.3ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.5ms)
+Completed in 19ms (View: 5, DB: 8) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:42:04) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (1.1ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.5ms)
+Completed in 18ms (View: 8, DB: 3) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:42:29) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (1.2ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.5ms)
+Completed in 29ms (View: 19, DB: 4) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:42:30) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (1.1ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.6ms)
+Completed in 16ms (View: 5, DB: 5) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:42:30) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (4.0ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.6ms)
+Completed in 23ms (View: 9, DB: 8) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:42:31) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (1.1ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.5ms)
+Completed in 15ms (View: 5, DB: 3) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:42:58) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (1.2ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.5ms)
+Completed in 19ms (View: 10, DB: 3) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:44:10) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (0.5ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.4ms)
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:44:38) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (1.1ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.5ms)
+Completed in 18ms (View: 9, DB: 3) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:45:14) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (0.2ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.6ms)
+Completed in 19ms (View: 10, DB: 3) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:45:31) [GET]
+  Parameters: {"id"=>"2482"}
+  [4;35;1mLocation Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (0.7ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 2482) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.5ms)
+Completed in 26ms (View: 15, DB: 3) | 200 OK [http://localhost/locations/2482]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:45:44) [POST]
+  Parameters: {"search"=>{"query"=>"fra"}}
+  [4;35;1mLocation Load (1.5ms)[0m   [0mSELECT * FROM `locations` WHERE (name like 'fra%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;36;1mLocation Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (11.7ms)
+Completed in 20ms (View: 8, DB: 5) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:45:46) [POST]
+  Parameters: {"search"=>{"query"=>"fram"}}
+  [4;35;1mLocation Load (1.2ms)[0m   [0mSELECT * FROM `locations` WHERE (name like 'fram%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;36;1mLocation Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (9.3ms)
+Completed in 19ms (View: 11, DB: 4) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 07:45:47) [POST]
+  Parameters: {"search"=>{"query"=>"frami"}}
+  [4;35;1mLocation Load (0.9ms)[0m   [0mSELECT * FROM `locations` WHERE (name like 'frami%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;36;1mLocation Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (7.5ms)
+Completed in 17ms (View: 5, DB: 3) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 07:45:49) [GET]
+  Parameters: {"id"=>"19686"}
+  [4;35;1mLocation Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (0.9ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 19686) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.6ms)
+Completed in 15ms (View: 5, DB: 5) | 200 OK [http://localhost/locations/19686]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-03-25 14:43:27) [GET]
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM `locations` ORDER BY population DESC LIMIT 0, 12[0m
+  [4;36;1mLocation Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT count(*) AS count_all FROM `locations` [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Rendered locations/_search_pane (0.5ms)
+Completed in 53ms (View: 41, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 14:43:34) [POST]
+  Parameters: {"search"=>{"query"=>"a"}}
+  [4;36;1mLocation Load (8.7ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'a%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (4.7ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (22.1ms)
+Completed in 28ms (View: 9, DB: 14) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 14:43:38) [POST]
+  Parameters: {"search"=>{"query"=>"ar"}}
+  [4;36;1mLocation Load (1.9ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'ar%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (19.9ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (29.6ms)
+Completed in 35ms (View: 8, DB: 22) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 14:43:39) [POST]
+  Parameters: {"search"=>{"query"=>"arl"}}
+  [4;36;1mLocation Load (0.9ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'arl%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (6.4ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (14.2ms)
+Completed in 20ms (View: 8, DB: 9) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 14:43:44) [POST]
+  Parameters: {"search"=>{"query"=>"arl"}}
+  [4;36;1mLocation Load (0.2ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'arl%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (8.1ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (14.2ms)
+Completed in 20ms (View: 7, DB: 9) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#auto_complete_for_search_query (for 127.0.0.1 at 2010-03-25 14:43:52) [POST]
+  Parameters: {"search"=>{"query"=>"arling"}}
+  [4;36;1mLocation Load (1.1ms)[0m   [0;1mSELECT * FROM `locations` WHERE (name like 'arling%' ) ORDER BY `population` DESC LIMIT 12[0m
+  [4;35;1mLocation Columns (11.2ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered locations/_search_results (19.0ms)
+Completed in 30ms (View: 8, DB: 13) | 200 OK [http://localhost/locations/auto_complete_for_search_query]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-03-25 14:43:53) [GET]
+  Parameters: {"id"=>"19304"}
+  [4;36;1mLocation Columns (222.5ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mLocation Load (0.6ms)[0m   [0mSELECT * FROM `locations` WHERE (`locations`.`id` = 19304) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Rendered locations/_search_pane (0.6ms)
+Completed in 233ms (View: 4, DB: 223) | 200 OK [http://localhost/locations/19304]
