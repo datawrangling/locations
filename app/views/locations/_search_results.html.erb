@@ -1,5 +1,5 @@
 <ul>
 	<% for location in @locations %>
-	<li><%= link_to h(location.name + ', ' + location.fipscode + ', ' + location.country_code), :controller=>"locations", :action=>"show", :id=>location %></li>
+	<li><span class='searchphrase'><%= link_to h(location.name), :controller=>"locations", :action=>"show", :id=>location %></span> <%= ', ' + location.fipscode + ', ' + location.country_code %></li>
   	<% end %>
 </ul>
