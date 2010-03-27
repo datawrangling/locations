@@ -17,7 +17,7 @@
 <% @locations.each do |location| %>
   <tr>
     <td><%=h location.geonameid %></td>
-    <td><%=h location.name %></td>
+    <td><%= link_to 'location.name', location %></td>
     <td><%=h location.latitude %></td>
     <td><%=h location.longitude %></td>
     <td><%=h location.country_code %></td>
@@ -25,7 +25,6 @@
     <td><%=h location.fipscode %></td>
     <td><%=h location.county %></td>
     <td><%=h location.population %></td>
-    <td><%= link_to 'Show', location %></td>
   </tr>
 <% end %>
 </table>
