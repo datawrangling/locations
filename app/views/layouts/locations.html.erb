@@ -10,7 +10,12 @@
 </head>
 <body>
 
-<%= render :partial=>"locations/search_pane" %>
+<div class="search_field">
+	<form method="get" action="/locations">
+		<div class="search_form">
+		    <span>City Search: </span><%= render :partial=>"locations/search_pane" %>
+		</div>
+	</form>
 
 
 <p style="color: green"><%= flash[:notice] %></p>

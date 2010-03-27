@@ -14,8 +14,12 @@ class LocationsController < ApplicationController
   # GET /locations.xml
   def index
     # @locations = Location.all
-    @locations = Location.paginate(:page => params[:page], :order => 'population DESC', :per_page => 12)   
-
+    if params[:search]
+      @locations = Location.name_like(params["search"]["query"]).paginate(:page => params[:page], :order => 'population DESC')  
+    else    
+      @locations = Location.paginate(:page => params[:page], :order => 'population DESC', :per_page => 12)   
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @locations }

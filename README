@@ -12,6 +12,7 @@ The main 'geoname' table has the following fields :
 2 name              : name of geographical point (utf8) varchar(200)
 5 latitude          : latitude in decimal degrees (wgs84)
 6 longitude         : longitude in decimal degrees (wgs84)
+
 9 country code      : ISO-3166 2-letter country code, 2 characters
 10 cc2               : alternate country codes, comma separated, ISO-3166 2-letter country code, 60 characters
 11 admin1 code       : fipscode (subject to change to iso code), see exceptions below, see file admin1Codes.txt for 
