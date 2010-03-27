@@ -15,7 +15,7 @@ class LocationsController < ApplicationController
   def index
     # @locations = Location.all
     if params[:search]
-      @locations = Location.name_like(params["search"]["query"]).paginate(:page => params[:page], :order => 'population DESC')  
+      @locations = Location.name_sounds_like(params["search"]["query"]).paginate(:page => params[:page], :order => 'population DESC')  
     else    
       @locations = Location.paginate(:page => params[:page], :order => 'population DESC', :per_page => 12)   
     end
