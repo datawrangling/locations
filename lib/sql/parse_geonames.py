@@ -54,8 +54,11 @@ def main():
         for alternate in alternates:#[1:(num_alt-1)]:
           alternate = alternate.strip()
           if len(alternate) > 0:
-            print '\t'.join([geonameid, alternate, latitude, longitude, 
-              country_code, cc2, admin1_code, admin2_code, population])
+            try:
+              int(alternate)
+            except:  
+              print '\t'.join([geonameid, alternate, latitude, longitude, 
+                country_code, cc2, admin1_code, admin2_code, population])
       except:
         pass    
       
