@@ -5,7 +5,7 @@ parse_geonames.py
 
 1,2,5,6,8,9,10,11,12,15 
 
-grep PPL ~/stream/cities1000.txt | ./parse_geonames.py | grep -v 'http' | sort | uniq > sample_cities.txt
+grep PPL ~/spatialanalytics/location_standardization/data/allUSCities.txt | ./parse_geonames.py | grep -v 'http' | sort | uniq > sample_cities.txt
 mysql -u root location_development < locations.sql
 
 The main 'geoname' table has the following fields :
@@ -36,7 +36,7 @@ def main():
         fields[i] = ' '
     #[7, 13, 13, 2117, 8, 9, 1, 3, 2, 0, 2, 0, 0, 0, 7, 2, 1, 16, 10]
     geonameid = fields[0]
-    name = fields[1]
+    name = fields[1].strip()
     alternate_names = fields[3]
     latitude = fields[4]
     longitude = fields[5]
@@ -45,14 +45,19 @@ def main():
     admin1_code = fields[10]
     admin2_code = fields[11]
     population = fields[14]
-    try:
-      print '\t'.join([geonameid,name, latitude,longitude,country_code,cc2,admin1_code,admin2_code,population])
-      alternates = alternate_names.split(',')
-      num_alt = min(4, len(alternates))
-      for alternate in alternates:#[1:(num_alt-1)]:
-        print '\t'.join([geonameid,alternate, latitude,longitude,country_code,cc2,admin1_code,admin2_code,population])
-    except:
-      pass    
+    if country_code =='US':
+      try:
+        print '\t'.join([geonameid, name, latitude, longitude, 
+          country_code, cc2, admin1_code, admin2_code, population])
+        alternates = alternate_names.split(',')
+        num_alt = min(4, len(alternates))
+        for alternate in alternates:#[1:(num_alt-1)]:
+          alternate = alternate.strip()
+          if len(alternate) > 0:
+            print '\t'.join([geonameid, alternate, latitude, longitude, 
+              country_code, cc2, admin1_code, admin2_code, population])
+      except:
+        pass    
       
 
 if __name__ == '__main__':
